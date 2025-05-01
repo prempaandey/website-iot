@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,34 +9,40 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   <style>
-    html, body {
+    html,
+    body {
       height: 100%;
     }
+
     body {
       display: flex;
       flex-direction: column;
       min-height: 100vh;
     }
+
     main {
       flex: 1;
       display: flex;
       flex-direction: column;
     }
+
     .tab-content {
       flex: 1;
       display: flex;
       flex-direction: column;
     }
+
     .tab-pane {
       flex: 1;
       display: flex;
       flex-direction: column;
     }
-    .tab-pane > div, .tab-pane > p, .tab-pane > ul, .tab-pane > h3 {
+
+    .tab-pane>div,
+    .tab-pane>p,
+    .tab-pane>ul,
+    .tab-pane>h3 {
       flex-shrink: 0;
-    }
-    .footer-spacer {
-      flex-grow: 1;
     }
   </style>
 </head>
@@ -58,7 +65,8 @@
         </ul>
 
         <form class="d-flex" role="search" action="projects.html" method="get">
-          <input class="form-control me-2" type="search" placeholder="Search projects..." aria-label="Search" id="searchInput">
+          <input class="form-control me-2" type="search" placeholder="Search projects..." aria-label="Search"
+            id="searchInput">
           <button class="btn btn-outline-light" type="button" onclick="searchProject()">Search</button>
         </form>
       </div>
@@ -71,23 +79,28 @@
     <!-- Project Title -->
     <div class="container text-center my-2">
       <h1 class="mb-3">Jazmin Security System</h1>
-      <p class="lead">A smart IoT-based anti-theft system featuring face recognition, motion sensors, gas & fire detection, and app-based control.</p>
+      <p class="lead">A smart IoT-based anti-theft system featuring face recognition, motion sensors, gas & fire
+        detection, and app-based control.</p>
     </div>
 
     <!-- Tabs Section -->
     <div class="container my-2 d-flex flex-column" style="flex: 1;">
       <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item" role="presentation">
-          <button class="nav-link active" id="intro-tab" data-bs-toggle="tab" data-bs-target="#intro" type="button" role="tab">Introduction</button>
+          <button class="nav-link active" id="intro-tab" data-bs-toggle="tab" data-bs-target="#intro" type="button"
+            role="tab">Introduction</button>
         </li>
         <li class="nav-item" role="presentation">
-          <button class="nav-link" id="doc-tab" data-bs-toggle="tab" data-bs-target="#doc" type="button" role="tab">Documentation</button>
+          <button class="nav-link" id="doc-tab" data-bs-toggle="tab" data-bs-target="#doc" type="button"
+            role="tab">Documentation</button>
         </li>
         <li class="nav-item" role="presentation">
-          <button class="nav-link" id="photos-tab" data-bs-toggle="tab" data-bs-target="#photos" type="button" role="tab">Photos & Videos</button>
+          <button class="nav-link" id="photos-tab" data-bs-toggle="tab" data-bs-target="#photos" type="button"
+            role="tab">Photos & Videos</button>
         </li>
         <li class="nav-item" role="presentation">
-          <button class="nav-link" id="github-tab" data-bs-toggle="tab" data-bs-target="#github" type="button" role="tab">GitHub</button>
+          <button class="nav-link" id="github-tab" data-bs-toggle="tab" data-bs-target="#github" type="button"
+            role="tab">GitHub</button>
         </li>
       </ul>
 
@@ -95,7 +108,8 @@
         <!-- Introduction Tab -->
         <div class="tab-pane fade show active p-4" id="intro" role="tabpanel">
           <h3>Overview</h3>
-          <p>The Jazmin Security system uses Raspberry Pi 4B and SIM800A GSM Module to monitor home security remotely through an app. It features:</p>
+          <p>The Jazmin Security system uses Raspberry Pi 4B and SIM800A GSM Module to monitor home security remotely
+            through an app. It features:</p>
           <ul>
             <li>Face Recognition with camera</li>
             <li>Motion Detection Sensors</li>
@@ -104,7 +118,6 @@
             <li>Emergency Buzzer System</li>
             <li>Full mobile app control</li>
           </ul>
-          <div class="footer-spacer"></div>
         </div>
 
         <!-- Documentation Tab -->
@@ -117,74 +130,95 @@
             <li>MQ2 Gas Sensor and Flame Sensor for smoke/fire detection</li>
             <li>SIM800A GSM Module for IVRS calls and SMS alerts</li>
             <li>App developed with React Native.</li>
-            <li><a href="Click here">Click here</a> to see full technical documentation.</li>
+            <p><strong>Click the icons below to see documentation:</strong></p>
+
+            <div class="d-flex gap-4 mt-3">
+              <!-- PDF 1 -->
+              <div class="text-center">
+                <a href="files/jazmin.pdf" target="_blank" class="pdf-icon-link">
+                  <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF 1" class="pdf-icon">
+                </a>
+                <div>System Architecture</div>
+              </div>
+
+              <!-- PDF 2 -->
+              <div class="text-center">
+                <a href="files/component1.pdf" target="_blank" class="pdf-icon-link">
+                  <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF 2" class="pdf-icon">
+                </a>
+                <div>Component Details</div>
+              </div>
+
+            </div>
+
           </ul>
-          <div class="footer-spacer"></div>
         </div>
 
-     <!-- Photos & Videos Tab -->
-      <div class="tab-pane fade p-4" id="photos" role="tabpanel">
-        <div class="row p-4">
-          <h3>Photos</h3>
-          <!-- Image 1 -->
-          <div class="col-md-4">
-            <img src="img/jazmin/jazmin1.jpg" class="img-fluid rounded mb-3" alt="Jazmin System Working">
-          </div>
-        
-          <!-- Image 2 -->
-          <div class="col-md-4">
-            <img src="img/jazmin/jazmin2.jpg" class="img-fluid rounded mb-3" alt="Camera Setup">
+        <!-- Photos & Videos Tab -->
+        <div class="tab-pane fade p-4" id="photos" role="tabpanel">
+          <div class="row p-4">
+            <h3>Photos</h3>
+            <!-- Image 1 -->
+            <div class="col-md-4">
+              <img src="img/jazmin/jazmin1.jpg" class="img-fluid rounded mb-3" alt="Jazmin System Working">
+            </div>
+
+            <!-- Image 2 -->
+            <div class="col-md-4">
+              <img src="img/jazmin/jazmin2.jpg" class="img-fluid rounded mb-3" alt="Camera Setup">
+            </div>
+
+            <!-- Image 3 -->
+            <div class="col-md-4">
+              <img src="img/jazmin/jazmin3.jpg" class="img-fluid rounded mb-3" alt="Camera Setup">
+            </div>
           </div>
 
-           <!-- Image 3 -->
-           <div class="col-md-4">
-            <img src="img/jazmin/jazmin3.jpg" class="img-fluid rounded mb-3" alt="Camera Setup">
-          </div>
-        </div>
-        
-        
-        <!-- Videos -->
-         
-        <div class="row p-4">
-          <h3>Videos</h3>
-          <div class="col-md-4">
-            <div class="video-container mb-4">
-              <video controls>
-                <source src="videos/jazmin1.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
+
+          <!-- Videos -->
+
+          <div class="row p-4">
+            <h3>Videos</h3>
+            <div class="col-md-4">
+              <div class="video-container mb-4">
+                <video controls>
+                  <source src="videos/jazmin1.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="video-container mb-4">
+                <video controls>
+                  <source src="videos/jazmin2.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="video-container mb-4">
+                <video controls>
+                  <source src="videos/jazmin3.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="video-container mb-4">
-              <video controls>
-                <source src="videos/jazmin2.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="video-container mb-4">
-              <video controls>
-                <source src="videos/jazmin3.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-        </div>
-        
-          <p><b>For more photos and videos, send us <a href="inquiry.html"> inquiry</a> or <a href="contact.html"> contact us</a> !</b></p>
-          <div class="footer-spacer"></div>
+
+          <p><b>For more photos and videos, send us <a href="inquiry.html"> inquiry</a> or <a href="contact.html">
+                contact us</a> !</b></p>
         </div>
 
         <!-- GitHub Link Tab -->
         <div class="tab-pane fade p-4" id="github" role="tabpanel">
           <h3>GitHub Repository</h3>
-          <p>Explore the full source codes and schematics at:</p>
+          <p>Visit my Github Profile at:</p>
           <a href="https://github.com/prempandeypp" target="_blank" class="btn btn-dark mb-3">
             <i class="fab fa-github"></i> Visit GitHub
           </a>
-          <div class="footer-spacer"></div>
+          <p><b>For the full source codes and schematics, send us <a href="inquiry.html"> inquiry</a> or <a
+                href="contact.html"> contact us</a> !</b></p>
+
         </div>
 
       </div>
@@ -211,7 +245,7 @@
         window.location.href = 'jazmin.html';
       } else if (query.includes('water') || query.includes('level') || query.includes('water-level')) {
         window.location.href = 'waterlevel.html';
-      } else if (query.includes('authen') || query.includes('more projects') ) {
+      } else if (query.includes('authen') || query.includes('more projects')) {
         window.location.href = 'authen.html';
       } else {
         alert('Project not found!');
@@ -219,21 +253,22 @@
     }
   </script>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const videos = document.querySelectorAll('video');
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const videos = document.querySelectorAll('video');
 
-    videos.forEach((video) => {
-      video.addEventListener('play', () => {
-        videos.forEach((v) => {
-          if (v !== video) {
-            v.pause();
-          }
+      videos.forEach((video) => {
+        video.addEventListener('play', () => {
+          videos.forEach((v) => {
+            if (v !== video) {
+              v.pause();
+            }
+          });
         });
       });
     });
-  });
-</script>
+  </script>
 
 </body>
+
 </html>

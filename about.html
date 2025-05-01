@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,18 +9,22 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   <style>
-    html, body {
+    html,
+    body {
       height: 100%;
     }
+
     body {
       display: flex;
       flex-direction: column;
     }
+
     main {
       flex: 1;
     }
   </style>
 </head>
+
 <body>
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
@@ -35,7 +40,8 @@
           </li>
         </ul>
         <form class="d-flex" role="search" action="projects.html" method="get">
-          <input class="form-control me-2" type="search" placeholder="Search projects..." aria-label="Search" id="searchInput">
+          <input class="form-control me-2" type="search" placeholder="Search projects..." aria-label="Search"
+            id="searchInput">
           <button class="btn btn-outline-light" type="button" onclick="searchProject()">Search</button>
         </form>
       </div>
@@ -47,10 +53,11 @@
       <div class="row align-items-center">
         <div class="col-md-4 text-center">
           <img src="img/prem.jpg" alt="Prem Pandey" class="img-fluid rounded-circle" style="max-width: 250px;">
-        </div>       
+        </div>
         <div class="col-md-8">
           <h1 class="mb-4">About Me</h1>
-          <p>Hello! I'm Prem Pandey, an IoT enthusiast passionate about building smart automation systems and innovative electronic projects. I have hands-on experience with Raspberry Pi, Arduino, and mobile app integration.</p>
+          <p>Hello! I'm Prem Pandey, an IoT enthusiast passionate about building smart automation systems and innovative
+            electronic projects. I have hands-on experience with Raspberry Pi, Arduino, and mobile app integration.</p>
           <p>My goal is to simplify life through technology and smart innovations.</p>
           <p>Feel free to check out my projects and get in touch!</p>
         </div>
@@ -77,12 +84,14 @@
         window.location.href = 'jazmin.html';
       } else if (query.includes('water') || query.includes('level') || query.includes('water-level')) {
         window.location.href = 'waterlevel.html';
-      } else if (query.includes('authen') || query.includes('more projects') ) {
+      } else if (query.includes('authen') || query.includes('more projects')) {
         window.location.href = 'authen.html';
       } else {
         alert('Project not found!');
       }
     }
   </script>
+  <div class="footer-spacer"></div>
 </body>
+
 </html>
