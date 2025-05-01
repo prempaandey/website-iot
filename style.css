@@ -12,7 +12,8 @@ body {
   padding: 0;
   height: 100vh;
   overflow-y: auto;
-  padding-bottom: 100px; /* Ensure content above footer */
+  padding-bottom: 100px;
+  /* Ensure content above footer */
   background-color: #f8f9fa;
 }
 
@@ -170,7 +171,29 @@ form input[type="search"]:focus {
 .video-container video {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Optional: fills the box better */
+  object-fit: cover;
+  /* Optional: fills the box better */
   display: block;
 }
 
+.pdf-icon {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.pdf-icon:hover {
+  transform: scale(1.2);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Make sure text is NOT clickable */
+.pdf-icon-link+div {
+  pointer-events: none;
+  user-select: none;
+}
+
+.footer-spacer {
+  height: 100px;
+}

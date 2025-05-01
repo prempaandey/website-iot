@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,6 +9,7 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
+
 <body>
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
@@ -23,7 +25,8 @@
           </li>
         </ul>
         <form class="d-flex" role="search" action="projects.html" method="get">
-          <input class="form-control me-2" type="search" placeholder="Search projects..." aria-label="Search" id="searchInput">
+          <input class="form-control me-2" type="search" placeholder="Search projects..." aria-label="Search"
+            id="searchInput">
           <button class="btn btn-outline-light" type="button" onclick="searchProject()">Search</button>
         </form>
       </div>
@@ -66,7 +69,7 @@
         window.location.href = 'jazmin.html';
       } else if (query.includes('water') || query.includes('level') || query.includes('water-level')) {
         window.location.href = 'waterlevel.html';
-      } else if (query.includes('authen') || query.includes('more projects') ) {
+      } else if (query.includes('authen') || query.includes('more projects')) {
         window.location.href = 'authen.html';
       } else {
         alert('Project not found!');
@@ -74,4 +77,5 @@
     }
   </script>
 </body>
+
 </html>
