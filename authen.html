@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Authen Project</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"> <!-- Icons -->
+
+</head>
+<body>
+
+  <!-- Navbar Same as other pages -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="projects.html">Projects</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search" action="projects.html" method="get">
+          <input class="form-control me-2" type="search" placeholder="Search projects..." aria-label="Search" id="searchInput">
+          <button class="btn btn-outline-light" type="button" onclick="searchProject()">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+      
+
+  <!-- Project Content -->
+  <section class="container my-4">
+    <h1 class="text-center mb-2"><img src="img/authen.png" class="img-fluid rounded" alt="Authen System Image" style="max-width: 100px;">Authen - Face Authentication System</h1>
+
+    <h3>Introduction</h3>
+    <p>Authen is a facial authentication project using a camera, LED indicators, and an LCD display. The system captures the photo of the person automatically when they stand in front of the camera and matches it against a stored set of images.</p>
+
+    <h4>Working Principle</h4>
+    <ul>
+      <li>Camera captures the image automatically when a person is detected.</li>
+      <li>Facial recognition compares the new image with saved authorized images.</li>
+      <li>If match found:
+        <ul>
+          <li>Green LED lights up.</li>
+          <li>LCD shows the candidate's name.</li>
+        </ul>
+      </li>
+      <li>If not matched:
+        <ul>
+          <li>Red LED lights up.</li>
+          <li>LCD shows "Not Recognized".</li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="row p-4">
+      <h3>Videos</h3>
+      <div class="col-md-4">
+        <div class="video-container mb-4">
+          <video controls>
+            <source src="videos/authen.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Same as Other Pages -->
+  <footer class="bg-dark text-light py-2">
+    <div class="container d-flex flex-column flex-md-row justify-content-center align-items-center">
+      <a href="about.html" class="footer-link mx-4"><i class="fas fa-user"></i> About Me</a>
+      <a href="inquiry.html" class="footer-link mx-4"><i class="fas fa-envelope"></i> Inquiry</a>
+      <a href="authen.html" class="footer-link mx-4"><i class="fas fa-project-diagram"></i> More Projects</a>
+      <a href="contact.html" class="footer-link mx-4"><i class="fas fa-phone"></i> Contact</a>
+    </div>
+    <div class="text-center small">© 2025 All Rights Reserved.</div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    function searchProject() {
+      const query = document.getElementById('searchInput').value.toLowerCase();
+      if (query.includes('jazmin')) {
+        window.location.href = 'jazmin.html';
+      } else if (query.includes('water') || query.includes('level') || query.includes('water-level')) {
+        window.location.href = 'waterlevel.html';
+      } else if (query.includes('authen') || query.includes('more projects') ) {
+        window.location.href = 'authen.html';
+      } else {
+        alert('Project not found!');
+      }
+    }
+  </script>
+
+</body>
+</html>
