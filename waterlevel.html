@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Water Level Automation</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+    html, body {
+      height: 100%;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .tab-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .tab-pane {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .tab-pane > div, .tab-pane > p, .tab-pane > ul, .tab-pane > h3 {
+      flex-shrink: 0;
+    }
+    .footer-spacer {
+      flex-grow: 1;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="projects.html">Projects</a>
+          </li>
+        </ul>
+
+        <form class="d-flex" role="search" action="projects.html" method="get">
+          <input class="form-control me-2" type="search" placeholder="Search projects..." aria-label="Search" id="searchInput">
+          <button class="btn btn-outline-light" type="button" onclick="searchProject()">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- Project Title -->
+    <div class="container text-center my-4">
+      <h1 class="mb-3">Water Level Monitoring System</h1>
+      <p class="lead">An IoT solution for real-time monitoring of tank and reservoir water levels using ultrasonic sensors and GSM alerts.</p>
+    </div>
+
+    <!-- Tabs Section -->
+    <div class="container my-2 d-flex flex-column" style="flex: 1;">
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="intro-tab" data-bs-toggle="tab" data-bs-target="#intro" type="button" role="tab">Introduction</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="doc-tab" data-bs-toggle="tab" data-bs-target="#doc" type="button" role="tab">Documentation</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="photos-tab" data-bs-toggle="tab" data-bs-target="#photos" type="button" role="tab">Photos & Videos</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="github-tab" data-bs-toggle="tab" data-bs-target="#github" type="button" role="tab">GitHub</button>
+        </li>
+      </ul>
+
+      <div class="tab-content flex-grow-1" id="myTabContent">
+        <!-- Introduction Tab -->
+        <div class="tab-pane fade show active p-4" id="intro" role="tabpanel">
+         
+<h3>Overview</h3>
+<p>The Water Level Automation System helps manage water in overhead and underground tanks efficiently through:</p>
+<ul>
+  <li>Ultrasonic Sensor for Underground Tank</li>
+  <li>Float Sensors for Overhead Tank</li>
+  <li>Automatic Motor Activation based on water levels</li>
+  <li>Buzzer Alerts for Full/Empty tanks</li>
+  <li>Manual and Auto Modes via App Control</li>
+  <li>Real-time water level display on LEDs and App</li>
+</ul>
+</div>
+
+<!-- Documentation Tab -->
+<div class="tab-pane fade p-4" id="doc" role="tabpanel">
+<h3>Technical Documentation</h3>
+<h5>Architecture:</h5>
+<ul>
+  <li>Ultrasonic Sensor HC-SR04 in underground tank</li>
+  <li>Float Switch Sensors in overhead tank</li>
+  <li>Motor controlled by relay module and Raspberry Pi</li>
+  <li>Mobile App Interface for mode switching and monitoring</li>
+  <li>Failsafe buzzer for overflow/low level warning</li>
+  <li><a href="Click here">Click here</a> to see full technical documentation.</li>
+</ul>
+<div class="footer-spacer"></div>
+</div>
+
+        <!-- Photos & Videos Tab -->
+      <div class="tab-pane fade p-4" id="photos" role="tabpanel">
+        <div class="row p-4">
+          <h3>Photos</h3>
+          <!-- Image 1 -->
+          <div class="col-md-4">
+            <img src="img/water_level/water_level1.jpg" class="img-fluid rounded mb-3" alt="Jazmin System Working">
+          </div>
+        
+          <!-- Image 2 -->
+          <div class="col-md-4">
+            <img src="img/water_level/water_level2.jpg" class="img-fluid rounded mb-3" alt="Camera Setup">
+          </div>
+
+           <!-- Image 3 -->
+           <div class="col-md-4">
+            <img src="img/water_level/water_level3.jpg" class="img-fluid rounded mb-3" alt="Camera Setup">
+          </div>
+        </div>
+        
+        
+        <!-- Videos -->
+         
+        <div class="row p-4">
+          <h3>Videos</h3>
+          <div class="col-md-4">
+            <div class="video-container mb-4">
+              <video controls>
+                <source src="videos/water_level1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="video-container mb-4">
+              <video controls>
+                <source src="videos/water_level2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="video-container mb-4">
+              <video controls>
+                <source src="videos/water_level3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+        
+          <p><b>For more photos and videos, send us <a href="inquiry.html"> inquiry</a> or <a href="contact.html"> contact us</a> !</b></p>
+          <div class="footer-spacer"></div>
+        </div>
+        <!-- GitHub Link Tab -->
+        <div class="tab-pane fade p-4" id="github" role="tabpanel">
+          <h3>GitHub Repository</h3>
+          <p>Access full project codes and schematics at:</p>
+          <a href="https://github.com/yourusername/waterlevel-monitoring" target="_blank" class="btn btn-dark mb-3">
+            <i class="fab fa-github"></i> Visit GitHub
+          </a>
+          <div class="footer-spacer"></div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-light py-2">
+    <div class="container d-flex flex-column flex-md-row justify-content-center align-items-center">
+      <a href="about.html" class="footer-link mx-4"><i class="fas fa-user"></i> About Me</a>
+      <a href="inquiry.html" class="footer-link mx-4"><i class="fas fa-envelope"></i> Inquiry</a>
+      <a href="authen.html" class="footer-link mx-4"><i class="fas fa-project-diagram"></i> More Projects</a>
+      <a href="contact.html" class="footer-link mx-4"><i class="fas fa-phone"></i> Contact</a>
+    </div>
+    <div class="text-center small">© 2025 All Rights Reserved.</div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function searchProject() {
+      const query = document.getElementById('searchInput').value.toLowerCase();
+      if (query.includes('jazmin')) {
+        window.location.href = 'jazmin.html';
+      } else if (query.includes('water') || query.includes('level') || query.includes('water-level')) {
+        window.location.href = 'waterlevel.html';
+      } else if (query.includes('authen') || query.includes('more projects') ) {
+        window.location.href = 'authen.html';
+      } else {
+        alert('Project not found!');
+      }
+    }
+  </script>
+  
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const videos = document.querySelectorAll('video');
+
+    videos.forEach((video) => {
+      video.addEventListener('play', () => {
+        videos.forEach((v) => {
+          if (v !== video) {
+            v.pause();
+          }
+        });
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
